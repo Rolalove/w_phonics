@@ -9,6 +9,7 @@ class CustomTextField extends StatelessWidget {
     this.textInputType = TextInputType.text,
     this.suffixIcon,
   });
+
   final String label;
   final TextEditingController? controller;
   final bool obscureText;
@@ -22,24 +23,27 @@ class CustomTextField extends StatelessWidget {
       obscureText: obscureText,
       keyboardType: textInputType,
 
+      style: const TextStyle(color: Colors.blue),
+
+      cursorColor: Colors.purple,
+
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
+
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.white),
         ),
+
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
-          borderSide: BorderSide(color: Colors.white),
+          borderSide: const BorderSide(color: Colors.blue),
         ),
-        fillColor: Colors.white,
+
         labelText: label,
-        labelStyle: TextStyle(color: Colors.white),
-        focusColor: Colors.white,
-        
+        labelStyle: const TextStyle(color: Colors.blue),
+        floatingLabelStyle: const TextStyle(color: Colors.blue),
       ),
-      cursorColor: Colors.white,
-      
     );
   }
 }
